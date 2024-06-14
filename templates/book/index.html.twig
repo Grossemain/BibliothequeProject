@@ -20,9 +20,9 @@
         {% for book in books %}
         <tr>
             <td>{{ book.id }}</td>
-            <td>{{ book.title }}</td>
+            <td><a href="{{ path('app_book_show', {'id': book.id}) }}">{{ book.title }}</a></td>
             <td>{{ book.resume }}</td>
-            <td> {{ book.author.lastName }} {{ book.author.firstName }}</td>
+            <td>{{ book.author.lastName }} {{ book.author.firstName }}</td>
             <td>{{ book.category.categoryName }}</td>
             <td>
                 <a href="{{ path('app_book_show', {'id': book.id}) }}">show</a>
